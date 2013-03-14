@@ -45,7 +45,7 @@ JSON object sample ({ "Ticker" : "IBM" }) transforms into (&lt;j son="o"&gt;&lt;
 JSON array
 If the JSON array has a property name transformation becomes &lt;j son="a:name"&gt;&lt;/j&gt;, else becomes &lt;j son="a"&gt;&lt;/j&gt;. 
 The value of the array depends on its type. Array elements are ordered according to their document order. 
-JSON array sample ("phoneNumbers": [ "212 555-1111", "212 555-2222" ]) transforms into (&lt;j son="a:phoneNumbers"&gt;&lt;j son="s"&gt;212 555-1111&lt;/j&gt;&lt;j son="s"&gt;212 555-2222&lt;/j&gt;&lt;/j&gt;)
+JSON array sample ("IDs": [ "212-111", "212-222" ]) transforms into (&lt;j son="a:IDs"&gt;&lt;j son="s"&gt;212-111&lt;/j&gt;&lt;j son="s"&gt;212-222&lt;/j&gt;&lt;/j&gt;)
 
 Root element
 The root element is either an JXML object or a JXML array element.
@@ -68,9 +68,9 @@ The following example document is a sample of the JSON structure.
     "state": "NY",
     "postalCode": 10021,
   },
-  "phoneNumbers": [
-    "212 555-1111",
-    "212 555-2222"
+  "IDs": [
+    "212-111",
+    "212-222"
   ],
   "additionalInfo": null,
   "remote": false,
@@ -89,9 +89,9 @@ The following output is the result of the transformed document to JXML.
         &lt;j son="s:state"&gt;NY&lt;/j&gt;
         &lt;j son="n:postalCode"&gt;10021&lt;/j&gt;
     &lt;/j&gt;
-    &lt;j son="a:phoneNumbers"&gt;
-        &lt;j son="s"&gt;212 555-1111&lt;/j&gt;
-        &lt;j son="s"&gt;212 555-2222&lt;/j&gt;
+    &lt;j son="a:IDs"&gt;
+        &lt;j son="s"&gt;212-111&lt;/j&gt;
+        &lt;j son="s"&gt;212-222&lt;/j&gt;
     &lt;/j&gt;
     &lt;j son="0:additionalInfo" /&gt;
     &lt;j son="b:remote"&gt;false&lt;/j&gt;
@@ -104,5 +104,5 @@ Credits
 
 JXML was created by Mario "rlyeh" Rodriguez.
 JSONx is an IBM® standard format to represent JSON as XML.
-This document includes text written by IBM guys. Thanks guys! :D
+This document includes text written by IBM. Thanks guys! :D
 </pre>
