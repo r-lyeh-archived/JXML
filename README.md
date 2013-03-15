@@ -16,7 +16,11 @@ JSON identifiers are represented by the string contents in the type:name attribu
 - Type is required. It is represented by a single character (see below). 
 - Name is optional. 
 
+Special characters
+JSON escaped characters in strings might become character entity references. 
 Most Unicode characters are valid within identifiers, as long as they are properly escaped (for example, \unnnn). 
+Any strings escaped with \u becomes XML entity references specified in decimal. 
+\b (backspace) is not supported in XML and, subsequently, is not supported in JXML.
 
 JSON boolean
 If the JSON boolean has a property name transformation becomes &lt;j son="b:name"&gt;&lt;/j&gt;, else becomes &lt;j son="b"&gt;&lt;/j&gt;. 
@@ -48,12 +52,7 @@ The value of the array depends on its type. Array elements are ordered according
 JSON array sample ("IDs": [ "212-111", "212-222" ]) transforms into (&lt;j son="a:IDs"&gt;&lt;j son="s"&gt;212-111&lt;/j&gt;&lt;j son="s"&gt;212-222&lt;/j&gt;&lt;/j&gt;)
 
 Root element
-The root element is either an JXML object or a JXML array element.
-
-Special characters
-JSON escaped characters in strings might become character entity references. 
-Any strings escaped with \u becomes XML entity references specified in decimal. 
-\b (backspace) is not supported in XML and, subsequently, is not supported in JXML.
+The root element is either a JXML object or a JXML array element.
 
 JXML sample
 ===========
@@ -75,7 +74,7 @@ The following example document is a sample of the JSON structure.
   "additionalInfo": null,
   "remote": false,
   "height": 62.4,
-  "ficoScore": " &gt; 640"
+  "ficoScore": "&gt; 640"
 }
 
 The following output is the result of the transformed document to JXML.
