@@ -49,7 +49,7 @@ JSON object sample ({ "Ticker" : "IBM" }) transforms into (&lt;j son="o"&gt;&lt;
 JSON array
 If the JSON array has a property name transformation becomes &lt;j son="a:name"&gt;&lt;/j&gt;, else becomes &lt;j son="a"&gt;&lt;/j&gt;. 
 The value of the array depends on its type. Array elements are ordered according to their document order. 
-JSON array sample ("IDs": [ "212-111", "212-222" ]) transforms into (&lt;j son="a:IDs"&gt;&lt;j son="s"&gt;212-111&lt;/j&gt;&lt;j son="s"&gt;212-222&lt;/j&gt;&lt;/j&gt;)
+JSON array sample ("IDs": [ "2-111", "2-222" ]) transforms into (&lt;j son="a:IDs"&gt;&lt;j son="s"&gt;2-111&lt;/j&gt;&lt;j son="s"&gt;2-222&lt;/j&gt;&lt;/j&gt;)
 
 Root element
 The root element is either a JXML object or a JXML array element.
@@ -68,8 +68,8 @@ The following example document is a sample of the JSON structure.
     "postalCode": 10021,
   },
   "IDs": [
-    "212-111",
-    "212-222"
+    "2-111",
+    "2-222"
   ],
   "additionalInfo": null,
   "remote": false,
@@ -89,8 +89,8 @@ The following output is the result of the transformed document to JXML.
         &lt;j son="n:postalCode"&gt;10021&lt;/j&gt;
     &lt;/j&gt;
     &lt;j son="a:IDs"&gt;
-        &lt;j son="s"&gt;212-111&lt;/j&gt;
-        &lt;j son="s"&gt;212-222&lt;/j&gt;
+        &lt;j son="s"&gt;2-111&lt;/j&gt;
+        &lt;j son="s"&gt;2-222&lt;/j&gt;
     &lt;/j&gt;
     &lt;j son="0:additionalInfo" /&gt;
     &lt;j son="b:remote"&gt;false&lt;/j&gt;
