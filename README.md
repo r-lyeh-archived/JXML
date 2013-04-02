@@ -6,7 +6,8 @@ JXML is a loss-less representation of JSON in XML, so data can be reused with XM
 JXML is based on JSONx (See http://goo.gl/I3cxs for details). 
 
 JXML syntax features a single uniform node 'j'. Tree iteration through XPath indices is possible.
-JXML syntax provides small XPath queries and relatively tiny XML files. 
+JXML syntax provides compact XML files.
+JXML syntax provides small XPath queries. 
 JXML syntax is subject to change.
 
 Conversion guide
